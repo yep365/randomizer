@@ -2,6 +2,9 @@ import React from "react";
 import "./Header.sass";
 import { Button } from "antd";
 const Header = () => {
+  const refreshPage = () => {
+    window.location.reload();
+  };
   return (
     <header>
       <div className="header">
@@ -10,7 +13,9 @@ const Header = () => {
           Проектирование интегральных микросхем и микропроцессоров
         </h2>
         <div className="header__generate-btn">
-          <Button type="default">Сгенерировать заново!</Button>
+          <Button onClick={refreshPage} type="default">
+            Сгенерировать заново!
+          </Button>
         </div>
       </div>
     </header>

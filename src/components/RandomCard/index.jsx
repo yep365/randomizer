@@ -3,9 +3,9 @@ import ReactCardFlip from "react-card-flip";
 import { Button } from "antd";
 
 import "./RandomCard.sass";
-const RandomCard = () => {
+const RandomCard = ({ displayingNumber }) => {
   const [flipped, setFlipped] = useState(false);
-
+  console.log(displayingNumber);
   const flipCard = () => {
     setFlipped(true);
   };
@@ -22,7 +22,7 @@ const RandomCard = () => {
             Вам выпал билет
             <br /> номер:
           </div>
-          <div className="random-card__back-number">5</div>
+          <div className="random-card__back-number">{displayingNumber}</div>
         </div>
       </ReactCardFlip>
     </div>
