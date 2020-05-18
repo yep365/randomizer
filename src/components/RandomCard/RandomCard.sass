@@ -1,0 +1,93 @@
+$green: #eff5f2
+$light-peach: #d67f27
+$peach: #a8c3f0
+$sand: #9cbcf5
+$white: #333232
+
+.random-card
+    display: flex
+    flex-direction: column-reverse
+    background-color: #a8c3f0
+    align-items: center
+    margin: 20px
+    width: 147px
+    border-color: #00AA66
+    border-style: solid
+    transition: 0.3s
+    border-radius: 20px
+
+    &__back,&__front
+        display: flex
+        flex-direction: column
+        text-align: center
+        align-items: center
+    &__front
+
+        button
+            height: 130px
+            -webkit-appearance: none
+            background: -webkit-gradient(to right,$green 0%,$sand 50%,$peach 100%)
+            background: linear-gradient(to right,$green 0%,$sand 50%,$peach 100%)
+            background-size: 500%
+            border-radius: 20px
+            color: $white
+            cursor: pointer
+            font: 1.5em Raleway, sans-serif
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            letter-spacing: .05em
+            outline: none
+            -webkit-tap-highlight-color: transparent
+            -webkit-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+            user-select: none
+            width: 150px
+            &:hover
+                animation-name: gradient
+                -webkit-animation-name: gradient
+                animation-duration: 2s
+                -webkit-animation-duration: s
+                animation-iteration-count: 1
+                -webkit-animation-iteration-count: 1
+                animation-fill-mode: forwards
+                -webkit-animation-fill-mode: forwards
+            &:active
+                background-image: none
+                outline: 0
+                -webkit-box-shadow: none
+                box-shadow: none
+
+    &__back
+        height: 130px
+        -webkit-appearance: none
+        background: -webkit-gradient(to right,$green 0%,$sand 50%,$peach 100%)
+        background: linear-gradient(to right,$green 0%,$sand 50%,$peach 100%)
+        background-size: 500%
+
+        border-radius: 20px
+        color: $white
+        cursor: pointer
+        font: 1.5em Raleway, sans-serif
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        letter-spacing: .05em
+        outline: none
+        -webkit-tap-highlight-color: transparent
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        width: 150px
+        &-number
+            margin-top: 17px
+            font-size: 26px
+        &-title
+            margin-top: 18px
+            font-size: 15px
+
+@keyframes gradient
+    0%
+        background-position: 0% 50%
+    100%
+        background-position: 100%
