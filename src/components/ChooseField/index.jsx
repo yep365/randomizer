@@ -4,14 +4,15 @@ import "./ChooseField.sass";
 const ChooseField = () => {
   let randomArray = [];
   let generateNumber = () => {
-    while (randomArray.length < 16) {
-      let randomNuber = Math.floor(Math.random() * 16) + 1;
+    while (randomArray.length < 24) {
+      let randomNuber = Math.floor(Math.random() * 24) + 1;
       if (randomArray.indexOf(randomNuber) === -1) {
         randomArray.push(randomNuber);
       }
     }
   };
   generateNumber();
+
   return (
     <div className="choose-field">
       {randomArray &&
